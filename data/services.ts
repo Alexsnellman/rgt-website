@@ -23,7 +23,7 @@ export const services: Service[] = [
     shortDesc: 'Turvallinen ja luvallinen asbestinpoisto ammattilaisilta.',
     featured: true,
     icon: '',
-    image: '/images/hero.avif',
+    image: '/images/unsplash-2.avif',
     description:
       'RGT Rakennuspalveluilla on voimassa oleva asbestipurkulupa. Suoritamme asbestipurun turvallisesti, lakien mukaisesti ja siististi - niin pienissä saneerauskohteissa kuin suurissa teollisuuspurkutöissä. Turvallisuus ja lakimääräisten vaatimusten noudattaminen on meille ensisijaista.',
     features: [
@@ -91,7 +91,7 @@ export const services: Service[] = [
     name: 'Keittiöremontti',
     shortDesc: 'Keittiöremontti avaimet käteen - purkamisesta asennukseen.',
     icon: '',
-    image: '/images/unsplash-2.avif',
+    image: '/images/unsplash-1.avif',
     description:
       'Toteutamme keittiöremontin alusta loppuun. Puramme vanhan keittiön, asennamme uudet kaapistot ja kalusteet, uusimme tarvittaessa lattian ja seinäpinnat. Työn laatu on huippuluokkaa ja aikataulu pitää.',
     features: [
@@ -123,7 +123,7 @@ export const services: Service[] = [
     name: 'Saneeraus ja pinnoitukset',
     shortDesc: 'Lattiat, seinät ja katot - laadukkaasti uusittuna.',
     icon: '',
-    image: '/images/unsplash-2.avif',
+    image: '/images/saneeraus.jpg',
     description:
       'Uusimme lattiat, seinäpinnat ja katot asunnoissa, toimistoissa ja liiketiloissa. Työmme on huolellista ja siistiä. Materiaalivalikoima on laaja - laminaatista parketista laattaan.',
     features: [
@@ -154,7 +154,7 @@ export const services: Service[] = [
     name: 'Loppusiivous',
     shortDesc: 'Remontin jälkeinen siivous - työmaa puhtaaksi nopeasti.',
     icon: '',
-    image: '/images/unsplash-1.avif',
+    image: '/images/loppusiivous.jpg',
     description:
       'Remontin jälkeen työmaa on usein pölyn ja jätteen peitossa. Hoidamme loppusiivouksen ammattimaisesti - lopputulos on puhdas ja valmis käyttöön. Siivouspalvelu on saatavilla myös erillisenä tilauksena.',
     features: [
