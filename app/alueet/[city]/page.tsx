@@ -31,7 +31,7 @@ export default function CityPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: `RGT Rakennuspalvelut - ${location.city}`,
-    description: `Ammattimaiset rakennuspalvelut ja asbestipurku ${location.city}ssä.`,
+    description: `Ammattimaiset rakennuspalvelut ja asbestipurku ${location.cityInessive}.`,
     url: `https://rgt.fi/alueet/${location.slug}`,
     telephone: '+358505651646',
     email: 'info@rgt.fi',
@@ -66,7 +66,7 @@ export default function CityPage({ params }: Props) {
 
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Palvelualue</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Asbestipurku ja Rakennuspalvelut<br />{location.city}ssä
+            Asbestipurku ja Rakennuspalvelut<br />{location.cityInessive}
           </h1>
           <p className="text-lg text-gray-500 max-w-2xl leading-relaxed mb-4">
             {location.description}
@@ -79,7 +79,7 @@ export default function CityPage({ params }: Props) {
               href="/yhteystiedot"
               className="inline-flex items-center justify-center bg-[#F5C518] text-black font-semibold px-8 py-4 hover:bg-[#e6b800] transition-colors"
             >
-              Pyydä tarjous {location.city}ssä
+              Pyydä tarjous {location.cityInessive}
             </Link>
             <a
               href="tel:0505651646"
@@ -96,7 +96,7 @@ export default function CityPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Palvelut</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-            Palvelut {location.city}ssä
+            Palvelut {location.cityInessive}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
             {services.map((s) => (
@@ -124,7 +124,7 @@ export default function CityPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Luotettava kumppani</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-            Ammattilaiset {location.city}ssä
+            Ammattilaiset {location.cityInessive}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
             <div className="bg-white p-8">
@@ -166,8 +166,8 @@ export default function CityPage({ params }: Props) {
       </section>
 
       <CTASection
-        title={`Pyydä tarjous ${location.city}ssä`}
-        subtitle={`Täytä yhteydenottolomake tai soita. Palvelemme ${location.city}ssä ja lähialueilla.`}
+        title={`Pyydä tarjous ${location.cityInessive}`}
+        subtitle={`Täytä yhteydenottolomake tai soita. Palvelemme ${location.cityInessive} ja lähialueilla.`}
       />
     </>
   )

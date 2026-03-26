@@ -1,6 +1,7 @@
 export interface Location {
   slug: string
   city: string
+  cityInessive: string // "missä?" - Helsingissä, Espoossa, Vantaalla
   region: string
   description: string
   seo: {
@@ -14,6 +15,7 @@ export const locations: Location[] = [
   {
     slug: 'helsinki',
     city: 'Helsinki',
+    cityInessive: 'Helsingissä',
     region: 'Uusimaa',
     description: 'Palvelemme Helsingissä ja koko pääkaupunkiseudulla. Toimistomme sijaitsee Helsingissä ja pystymme aloittamaan työn nopealla aikataululla.',
     seo: {
@@ -25,6 +27,7 @@ export const locations: Location[] = [
   {
     slug: 'espoo',
     city: 'Espoo',
+    cityInessive: 'Espoossa',
     region: 'Uusimaa',
     description: 'Palvelemme Espoossa ja lähialueilla. Nopea siirtyminen kohteeseen - pääkaupunkiseudun kohteet hoidamme tehokkaasti.',
     seo: {
@@ -36,6 +39,7 @@ export const locations: Location[] = [
   {
     slug: 'vantaa',
     city: 'Vantaa',
+    cityInessive: 'Vantaalla',
     region: 'Uusimaa',
     description: 'Palvelemme Vantaalla ja lähialueilla. Ammattitaitoiset rakennuspalvelut nopealla aikataululla.',
     seo: {
@@ -47,6 +51,7 @@ export const locations: Location[] = [
   {
     slug: 'tampere',
     city: 'Tampere',
+    cityInessive: 'Tampereella',
     region: 'Pirkanmaa',
     description: 'Palvelemme myös Tampereella ja Pirkanmaalla. Ota yhteyttä ja sovitaan kohteesta.',
     seo: {
@@ -58,6 +63,7 @@ export const locations: Location[] = [
   {
     slug: 'turku',
     city: 'Turku',
+    cityInessive: 'Turussa',
     region: 'Varsinais-Suomi',
     description: 'Palvelemme Turussa ja Varsinais-Suomessa. Laadukkaat rakennuspalvelut ja asbestipurku.',
     seo: {
@@ -69,6 +75,7 @@ export const locations: Location[] = [
   {
     slug: 'oulu',
     city: 'Oulu',
+    cityInessive: 'Oulussa',
     region: 'Pohjois-Pohjanmaa',
     description: 'Palvelemme myös Oulussa ja Pohjois-Pohjanmaalla. Ota yhteyttä ja selvitetään mahdollisuudet.',
     seo: {
@@ -80,6 +87,7 @@ export const locations: Location[] = [
   {
     slug: 'jyvaskyla',
     city: 'Jyväskylä',
+    cityInessive: 'Jyväskylässä',
     region: 'Keski-Suomi',
     description: 'Palvelemme Jyväskylän alueella. Laadukkaat rakennuspalvelut ammattitaitoiselta tiimiltämme.',
     seo: {

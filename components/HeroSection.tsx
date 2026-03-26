@@ -1,19 +1,19 @@
 import Link from 'next/link'
 
 interface HeroSectionProps {
-  city?: string
+  cityInessive?: string
   service?: string
 }
 
-export default function HeroSection({ city, service }: HeroSectionProps) {
+export default function HeroSection({ cityInessive, service }: HeroSectionProps) {
   const headline = service
     ? `${service} - Ammattilaiset paikalle nopeasti`
-    : city
-    ? `Asbestipurku ja Rakennuspalvelut ${city}ssä`
+    : cityInessive
+    ? `Asbestipurku ja Rakennuspalvelut ${cityInessive}`
     : 'Asbestipurku ja Rakennuspalvelut Helsingissä'
 
-  const sub = city
-    ? `RGT Rakennuspalvelut tarjoaa ammattimaiset rakennuspalvelut ${city}ssä. Asbestipurkulupa voimassa. Nopea aikataulu, siisti työ.`
+  const sub = cityInessive
+    ? `RGT Rakennuspalvelut tarjoaa ammattimaiset rakennuspalvelut ${cityInessive}. Asbestipurkulupa voimassa. Nopea aikataulu, siisti työ.`
     : 'Voimassa oleva asbestipurkulupa. Purku-urakat, keittiöremontit, saneeraukset ja loppusiivous - kaikki saman katon alta.'
 
   return (
