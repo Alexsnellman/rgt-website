@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { services } from '@/data/services'
 import { locations } from '@/data/locations'
 
@@ -10,11 +11,18 @@ export default function Navbar() {
   const [alueetOpen, setAlueetOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/" className="text-white font-bold text-xl tracking-tight hover:text-[#F5C518] transition-colors">
-          RGT Rakennuspalvelut
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/rgt-logo.png"
+            alt="RGT Rakennuspalvelut"
+            width={120}
+            height={36}
+            className="h-8 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -25,7 +33,7 @@ export default function Navbar() {
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <button className="px-4 py-2 text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1">
+            <button className="px-4 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1">
               Palvelut
               <svg className="w-3 h-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -33,15 +41,15 @@ export default function Navbar() {
             </button>
             {servicesOpen && (
               <div className="absolute top-full left-0 pt-2 w-56">
-                <div className="bg-[#111] border border-white/10 py-2">
+                <div className="bg-white border border-gray-200 shadow-lg py-2">
                   {services.map((s) => (
                     <Link
                       key={s.slug}
                       href={`/palvelut/${s.slug}`}
-                      className="block px-4 py-2.5 text-sm text-white/70 hover:text-[#F5C518] hover:bg-white/5 transition-colors"
+                      className="block px-4 py-2.5 text-sm text-gray-600 hover:text-amber-600 hover:bg-gray-50 transition-colors"
                     >
                       {s.name}
-                      {s.featured && <span className="ml-2 text-xs text-[#F5C518]">★</span>}
+                      {s.featured && <span className="ml-2 w-1.5 h-1.5 bg-[#F5C518] rounded-full inline-block align-middle" />}
                     </Link>
                   ))}
                 </div>
@@ -55,7 +63,7 @@ export default function Navbar() {
             onMouseEnter={() => setAlueetOpen(true)}
             onMouseLeave={() => setAlueetOpen(false)}
           >
-            <button className="px-4 py-2 text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1">
+            <button className="px-4 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1">
               Alueet
               <svg className="w-3 h-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -63,12 +71,12 @@ export default function Navbar() {
             </button>
             {alueetOpen && (
               <div className="absolute top-full left-0 pt-2 w-48">
-                <div className="bg-[#111] border border-white/10 py-2">
+                <div className="bg-white border border-gray-200 shadow-lg py-2">
                   {locations.map((l) => (
                     <Link
                       key={l.slug}
                       href={`/alueet/${l.slug}`}
-                      className="block px-4 py-2.5 text-sm text-white/70 hover:text-[#F5C518] hover:bg-white/5 transition-colors"
+                      className="block px-4 py-2.5 text-sm text-gray-600 hover:text-amber-600 hover:bg-gray-50 transition-colors"
                     >
                       {l.city}
                     </Link>
@@ -78,14 +86,14 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link href="/yhteystiedot" className="px-4 py-2 text-sm text-white/70 hover:text-white transition-colors">
+          <Link href="/yhteystiedot" className="px-4 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors">
             Yhteystiedot
           </Link>
         </nav>
 
         {/* CTA + phone */}
         <div className="hidden md:flex items-center gap-4">
-          <a href="tel:0505651646" className="text-sm text-white/60 hover:text-white transition-colors font-medium">
+          <a href="tel:0505651646" className="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">
             050 565 1646
           </a>
           <Link
@@ -98,7 +106,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-white p-2"
+          className="md:hidden text-gray-900 p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Valikko"
         >
@@ -114,35 +122,35 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-black border-t border-white/10">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-6 py-4 space-y-1">
-            <p className="text-xs text-white/40 uppercase tracking-widest mb-3">Palvelut</p>
+            <p className="text-xs text-gray-400 uppercase tracking-widest mb-3">Palvelut</p>
             {services.map((s) => (
               <Link
                 key={s.slug}
                 href={`/palvelut/${s.slug}`}
-                className="block py-2 text-sm text-white/70 hover:text-[#F5C518] transition-colors"
+                className="block py-2 text-sm text-gray-600 hover:text-amber-600 transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {s.name}
               </Link>
             ))}
-            <div className="border-t border-white/10 my-3" />
-            <p className="text-xs text-white/40 uppercase tracking-widest mb-3">Alueet</p>
+            <div className="border-t border-gray-200 my-3" />
+            <p className="text-xs text-gray-400 uppercase tracking-widest mb-3">Alueet</p>
             {locations.map((l) => (
               <Link
                 key={l.slug}
                 href={`/alueet/${l.slug}`}
-                className="block py-2 text-sm text-white/70 hover:text-[#F5C518] transition-colors"
+                className="block py-2 text-sm text-gray-600 hover:text-amber-600 transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {l.city}
               </Link>
             ))}
-            <div className="border-t border-white/10 my-3" />
+            <div className="border-t border-gray-200 my-3" />
             <Link
               href="/yhteystiedot"
-              className="block py-2 text-sm text-white/70 hover:text-[#F5C518] transition-colors"
+              className="block py-2 text-sm text-gray-600 hover:text-amber-600 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               Yhteystiedot

@@ -7,12 +7,12 @@ interface FAQItem {
 }
 
 const defaultFAQ: FAQItem[] = [
-  { question: 'Onko teilla asbestipurkulupa?', answer: 'Kyllä. RGT Rakennuspalveluilla on voimassa oleva asbestipurkulupa. Kaikki asbestityöt tehdaan lakien ja maaraysten mukaisesti koulutetulla henkilöstölla.' },
+  { question: 'Onko teilla asbestipurkulupa?', answer: 'Kylla. RGT Rakennuspalveluilla on voimassa oleva asbestipurkulupa. Kaikki asbestityot tehdaan lakien ja maaraysten mukaisesti koulutetulla henkilostolla.' },
   { question: 'Missa toimitte?', answer: 'Toimimme paasiasiassa Helsingissa ja koko Uudenmaan alueella. Tarvittaessa hoidamme kohteita myos laajemmalla alueella - Tampere, Turku, Oulu. Kysy rohkeasti.' },
   { question: 'Kuinka nopeasti voitte aloittaa?', answer: 'Pystymme usein aloittamaan muutaman paivan sisalla yhteydenotosta. Kiireelliset kohteet pyrimme hoitamaan mahdollisimman nopeasti.' },
-  { question: 'Teetteko myos pienet urakat?', answer: 'Kyllä. Otamme vastaan urakat kaikista kokoluokista - yksittaisesta kylpyhuoneen purkamisesta suuriin teollisuuskohteisiin.' },
-  { question: 'Mika on hinta?', answer: 'Hinta maaraatyy kohteen koosta ja työn laajuudesta. Tarjoamme kiintean hinnan tarjouksen maksutta. Ota yhteyttä ja pyydä tarjous.' },
-  { question: 'Hoidatteko jatteiden kuljetuksen?', answer: 'Kyllä. Huolehdimme kaikesta jatteista - myos asbestijatteesta - asianmukaisiin vastaanottopaikkoihin. Hinta sisaltyy urakkaan.' },
+  { question: 'Teetteko myos pienet urakat?', answer: 'Kylla. Otamme vastaan urakat kaikista kokoluokista - yksittaisesta kylpyhuoneen purkamisesta suuriin teollisuuskohteisiin.' },
+  { question: 'Mika on hinta?', answer: 'Hinta maaraytyy kohteen koosta ja tyon laajuudesta. Tarjoamme kiintean hinnan tarjouksen maksutta. Ota yhteytta ja pyydaa tarjous.' },
+  { question: 'Hoidatteko jatteiden kuljetuksen?', answer: 'Kylla. Huolehdimme kaikesta jatteista - myos asbestijatteesta - asianmukaisiin vastaanottopaikkoihin. Hinta sisaltyy urakkaan.' },
 ]
 
 interface FAQSectionProps {
@@ -23,27 +23,27 @@ export default function FAQSection({ items = defaultFAQ }: FAQSectionProps) {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section className="py-24 bg-[#050505] border-t border-white/10">
+    <section className="py-24 bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#F5C518] mb-3">UKK</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-            Usein kysyttyä
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">UKK</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+            Usein kysyttya
           </h2>
         </div>
 
-        <div className="border border-white/10 overflow-hidden">
+        <div className="border border-gray-200 overflow-hidden">
           {items.map((item, i) => (
-            <div key={i} className={`border-b border-white/10 last:border-0 ${open === i ? 'bg-[#0a0a0a]' : 'bg-black'}`}>
+            <div key={i} className={`border-b border-gray-200 last:border-0 ${open === i ? 'bg-gray-50' : 'bg-white'}`}>
               <button
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full text-left px-8 py-6 flex items-center justify-between gap-4 group"
               >
-                <span className="font-medium text-white group-hover:text-[#F5C518] transition-colors">
+                <span className="font-medium text-gray-900 group-hover:text-amber-600 transition-colors">
                   {item.question}
                 </span>
                 <svg
-                  className={`w-5 h-5 text-white/40 shrink-0 transition-transform ${open === i ? 'rotate-180' : ''}`}
+                  className={`w-5 h-5 text-gray-400 shrink-0 transition-transform ${open === i ? 'rotate-180' : ''}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -52,7 +52,7 @@ export default function FAQSection({ items = defaultFAQ }: FAQSectionProps) {
                 </svg>
               </button>
               {open === i && (
-                <div className="px-8 pb-6 text-white/60 text-sm leading-relaxed">
+                <div className="px-8 pb-6 text-gray-500 text-sm leading-relaxed">
                   {item.answer}
                 </div>
               )}

@@ -11,33 +11,33 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Työ valmis',
-    description: 'Tiimimme hoitaa työn sovitulla aikataululla. Jätämme työmaan siistina ja toimitamme tarvittavat dokumentit.',
+    title: 'Tyo valmis',
+    description: 'Tiimimme hoitaa tyon sovitulla aikataululla. Jatamme tyomaan siistina ja toimitamme tarvittavat dokumentit.',
   },
 ]
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 bg-black border-t border-white/10">
+    <section className="py-24 bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#F5C518] mb-3">Naain se toimii</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Naain se toimii</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
             Kolme vaihetta valmiiseen
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
           {steps.map((step, i) => (
-            <div key={step.number} className="bg-[#0a0a0a] p-8 relative">
+            <div key={step.number} className="bg-white p-8 relative">
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 text-white/20 text-lg">
-                  →
+                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 text-gray-300 text-lg">
+                  &rarr;
                 </div>
               )}
-              <p className="text-5xl font-bold text-[#F5C518]/20 mb-4 leading-none">{step.number}</p>
-              <h3 className="text-lg font-semibold text-white mb-3">{step.title}</h3>
-              <p className="text-sm text-white/50 leading-relaxed">{step.description}</p>
+              <p className="text-5xl font-bold text-[#F5C518]/40 mb-4 leading-none">{step.number}</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">{step.title}</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>

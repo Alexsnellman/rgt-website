@@ -68,33 +68,31 @@ export default function ServicePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-black relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#F5C518]" />
-        <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-[#F5C518] opacity-[0.03] rounded-full blur-[100px] pointer-events-none" />
+      <section className="pt-32 pb-20 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#F5C518]" />
         <div className="max-w-7xl mx-auto px-6">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-xs text-white/30 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Etusivu</Link>
+          <nav className="flex items-center gap-2 text-xs text-gray-400 mb-8">
+            <Link href="/" className="hover:text-gray-700 transition-colors">Etusivu</Link>
             <span>/</span>
-            <Link href="/" className="hover:text-white transition-colors">Palvelut</Link>
+            <Link href="/" className="hover:text-gray-700 transition-colors">Palvelut</Link>
             <span>/</span>
-            <span className="text-white/60">{service.name}</span>
+            <span className="text-gray-600">{service.name}</span>
           </nav>
 
-          <div className="flex items-start gap-4 mb-6">
-            <span className="text-5xl">{service.icon}</span>
-            {service.featured && (
-              <span className="mt-2 text-xs font-semibold text-[#F5C518] border border-[#F5C518]/30 px-2 py-0.5">
-                Paaapalvelu
+          {service.featured && (
+            <div className="mb-6">
+              <span className="text-xs font-semibold text-amber-600 border border-amber-200 bg-amber-50 px-2 py-0.5">
+                Paapalvelu
               </span>
-            )}
-          </div>
+            </div>
+          )}
 
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#F5C518] mb-3">Palvelu</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Palvelu</p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             {service.name}
           </h1>
-          <p className="text-lg text-white/60 max-w-2xl leading-relaxed mb-10">
+          <p className="text-lg text-gray-500 max-w-2xl leading-relaxed mb-10">
             {service.description}
           </p>
           <Link
@@ -107,15 +105,17 @@ export default function ServicePage({ params }: Props) {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-[#050505] border-t border-white/10">
+      <section className="py-20 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#F5C518] mb-3">Sisaltaa</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-10">Mita palvelu sisaltaa</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 overflow-hidden">
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Sisaltaa</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">Mita palvelu sisaltaa</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
             {service.features.map((f) => (
-              <div key={f} className="bg-[#0a0a0a] px-6 py-5 flex items-start gap-3">
-                <span className="text-[#F5C518] mt-0.5">✓</span>
-                <span className="text-white/80 text-sm">{f}</span>
+              <div key={f} className="bg-white px-6 py-5 flex items-start gap-3">
+                <svg className="w-4 h-4 text-[#F5C518] mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-gray-700 text-sm">{f}</span>
               </div>
             ))}
           </div>
@@ -123,15 +123,15 @@ export default function ServicePage({ params }: Props) {
       </section>
 
       {/* Use cases */}
-      <section className="py-20 bg-black border-t border-white/10">
+      <section className="py-20 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#F5C518] mb-3">Kayttokohteet</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-10">Tyypilliset kohteet</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 overflow-hidden">
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Kayttokohteet</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">Tyypilliset kohteet</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
             {service.useCases.map((uc) => (
-              <div key={uc.title} className="bg-[#0a0a0a] p-8">
-                <h3 className="font-semibold text-white mb-2">{uc.title}</h3>
-                <p className="text-sm text-white/50 leading-relaxed">{uc.description}</p>
+              <div key={uc.title} className="bg-white p-8">
+                <h3 className="font-semibold text-gray-900 mb-2">{uc.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{uc.description}</p>
               </div>
             ))}
           </div>
@@ -142,20 +142,19 @@ export default function ServicePage({ params }: Props) {
       <FAQSection items={service.faq} />
 
       {/* Related services */}
-      <section className="py-20 bg-black border-t border-white/10">
+      <section className="py-20 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#F5C518] mb-3">Katso myos</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-10">Muut palvelut</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 overflow-hidden">
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Katso myos</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">Muut palvelut</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
             {relatedServices.map((s) => (
               <Link
                 key={s.slug}
                 href={`/palvelut/${s.slug}`}
-                className="group bg-[#0a0a0a] p-8 hover:bg-[#111] transition-colors"
+                className="group bg-white p-8 hover:bg-gray-50 transition-colors"
               >
-                <span className="text-2xl mb-3 block">{s.icon}</span>
-                <h3 className="font-semibold text-white mb-2 group-hover:text-[#F5C518] transition-colors">{s.name}</h3>
-                <p className="text-sm text-white/50">{s.shortDesc}</p>
+                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">{s.name}</h3>
+                <p className="text-sm text-gray-500">{s.shortDesc}</p>
               </Link>
             ))}
           </div>

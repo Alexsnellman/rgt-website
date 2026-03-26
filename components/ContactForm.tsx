@@ -27,13 +27,13 @@ export default function ContactForm() {
     }
   }
 
-  const inputClass = 'w-full bg-black border border-white/20 text-white placeholder-white/30 px-4 py-3 text-sm focus:outline-none focus:border-[#F5C518] transition-colors'
+  const inputClass = 'w-full bg-white border border-gray-300 text-gray-900 placeholder-gray-400 px-4 py-3 text-sm focus:outline-none focus:border-[#F5C518] transition-colors'
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-medium text-white/50 mb-1.5">Nimi *</label>
+          <label className="block text-xs font-medium text-gray-500 mb-1.5">Nimi *</label>
           <input
             type="text"
             required
@@ -44,7 +44,7 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="block text-xs font-medium text-white/50 mb-1.5">Puhelin *</label>
+          <label className="block text-xs font-medium text-gray-500 mb-1.5">Puhelin *</label>
           <input
             type="tel"
             required
@@ -57,7 +57,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-xs font-medium text-white/50 mb-1.5">Sahköposti</label>
+        <label className="block text-xs font-medium text-gray-500 mb-1.5">Sahkoposti</label>
         <input
           type="email"
           placeholder="matti@esimerkki.fi"
@@ -68,7 +68,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-xs font-medium text-white/50 mb-1.5">Palvelu</label>
+        <label className="block text-xs font-medium text-gray-500 mb-1.5">Palvelu</label>
         <select
           value={form.service}
           onChange={(e) => setForm({ ...form, service: e.target.value })}
@@ -83,7 +83,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-xs font-medium text-white/50 mb-1.5">Viesti *</label>
+        <label className="block text-xs font-medium text-gray-500 mb-1.5">Viesti *</label>
         <textarea
           required
           rows={5}
@@ -95,12 +95,12 @@ export default function ContactForm() {
       </div>
 
       {status === 'error' && (
-        <p className="text-red-400 text-sm">{errorMsg || 'Jokin meni pieleen. Yrita uudelleen.'}</p>
+        <p className="text-red-500 text-sm">{errorMsg || 'Jokin meni pieleen. Yrita uudelleen.'}</p>
       )}
 
       {status === 'success' ? (
-        <div className="bg-[#F5C518]/10 border border-[#F5C518]/20 px-6 py-4 text-[#F5C518] text-sm font-medium">
-          Viesti lahetetty! Otamme yhteyttä pian.
+        <div className="bg-amber-50 border border-amber-200 px-6 py-4 text-amber-700 text-sm font-medium">
+          Viesti lahetetty! Otamme yhteytta pian.
         </div>
       ) : (
         <button
@@ -108,7 +108,7 @@ export default function ContactForm() {
           disabled={status === 'loading'}
           className="w-full bg-[#F5C518] text-black font-semibold py-4 hover:bg-[#e6b800] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {status === 'loading' ? 'Lähetetään...' : 'Lähetä viesti'}
+          {status === 'loading' ? 'Lahetetaan...' : 'Laheta viesti'}
         </button>
       )}
     </form>
