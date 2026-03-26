@@ -14,9 +14,9 @@ export default function Footer() {
               <Image
                 src="/rgt-logo.png"
                 alt="RGT Rakennuspalvelut"
-                width={100}
-                height={30}
-                className="h-7 w-auto"
+                width={160}
+                height={48}
+                className="h-11 w-auto"
               />
             </Link>
             <p className="mt-3 text-sm text-gray-500 leading-relaxed">

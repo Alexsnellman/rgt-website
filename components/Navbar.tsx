@@ -18,9 +18,9 @@ export default function Navbar() {
           <Image
             src="/rgt-logo.png"
             alt="RGT Rakennuspalvelut"
-            width={120}
-            height={36}
-            className="h-8 w-auto"
+            width={180}
+            height={54}
+            className="h-12 w-auto"
             priority
           />
         </Link>
