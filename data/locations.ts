@@ -79,13 +79,13 @@ export const locations: Location[] = [
   },
   {
     slug: 'jyvaskyla',
-    city: 'Jyvaskyla',
+    city: 'Jyväskylä',
     region: 'Keski-Suomi',
-    description: 'Palvelemme Jyvaskylan alueella. Laadukkaat rakennuspalvelut ammattitaitoiselta tiimiltamme.',
+    description: 'Palvelemme Jyväskylän alueella. Laadukkaat rakennuspalvelut ammattitaitoiselta tiimiltämme.',
     seo: {
-      title: 'Asbestipurku Jyvaskyla | Rakennuspalvelut Jyvaskyla | RGT',
-      description: 'Ammattimaiset rakennuspalvelut ja asbestipurku Jyvaskylass. Luvallinen asbestinpoisto, purku-urakat, remontit. Pyydä tarjous.',
-      keywords: ['asbestipurku jyvaskyla', 'rakennuspalvelut jyvaskyla', 'purku-urakka jyvaskyla'],
+      title: 'Asbestipurku Jyväskylä | Rakennuspalvelut Jyväskylä | RGT',
+      description: 'Ammattimaiset rakennuspalvelut ja asbestipurku Jyväskylässä. Luvallinen asbestinpoisto, purku-urakat, remontit. Pyydä tarjous.',
+      keywords: ['asbestipurku jyväskylä', 'rakennuspalvelut jyväskylä', 'purku-urakka jyväskylä'],
     },
   },
 ]

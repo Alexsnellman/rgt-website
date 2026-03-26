@@ -9,11 +9,11 @@ export default function HeroSection({ city, service }: HeroSectionProps) {
   const headline = service
     ? `${service} - Ammattilaiset paikalle nopeasti`
     : city
-    ? `Asbestipurku ja Rakennuspalvelut ${city}ssa`
-    : 'Asbestipurku ja Rakennuspalvelut Helsingissa'
+    ? `Asbestipurku ja Rakennuspalvelut ${city}ssä`
+    : 'Asbestipurku ja Rakennuspalvelut Helsingissä'
 
   const sub = city
-    ? `RGT Rakennuspalvelut tarjoaa ammattimaiset rakennuspalvelut ${city}ssa. Asbestipurkulupa voimassa. Nopea aikataulu, siisti tyo.`
+    ? `RGT Rakennuspalvelut tarjoaa ammattimaiset rakennuspalvelut ${city}ssä. Asbestipurkulupa voimassa. Nopea aikataulu, siisti työ.`
     : 'Voimassa oleva asbestipurkulupa. Purku-urakat, keittiöremontit, saneeraukset ja loppusiivous - kaikki saman katon alta.'
 
   return (

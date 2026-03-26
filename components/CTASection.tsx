@@ -7,7 +7,7 @@ interface CTASectionProps {
 
 export default function CTASection({
   title = 'Pyydä ilmainen tarjous',
-  subtitle = 'Ota yhteyttä tanaan. Vastaamme nopeasti ja sovimme katselmuksesta tai teemme tarjouksen suoraan.',
+  subtitle = 'Ota yhteyttä tänään. Vastaamme nopeasti ja sovimme katselmuksesta tai teemme tarjouksen suoraan.',
 }: CTASectionProps) {
   return (
     <section className="py-24 bg-gray-50 border-t border-gray-200">
@@ -30,7 +30,7 @@ export default function CTASection({
                 href="/yhteystiedot"
                 className="inline-flex items-center justify-center bg-[#F5C518] text-black font-semibold px-8 py-4 hover:bg-[#e6b800] transition-colors"
               >
-                Laheta viesti
+                Lähetä viesti
               </Link>
               <a
                 href="tel:0505651646"

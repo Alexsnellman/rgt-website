@@ -20,7 +20,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-3 text-sm text-gray-500 leading-relaxed">
-              Ammattimaiset rakennuspalvelut ja asbestipurku Helsingissa ja Uudellamaalla.
+              Ammattimaiset rakennuspalvelut ja asbestipurku Helsingissä ja Uudellamaalla.
             </p>
             <div className="mt-6 space-y-1 text-sm text-gray-500">
               <p>Hernepellonkuja 6, 00560 Helsinki</p>
@@ -87,7 +87,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-200 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-400">
-            &copy; {new Date().getFullYear()} RGT Rakennuspalvelut. Kaikki oikeudet pidatetaan.
+            &copy; {new Date().getFullYear()} RGT Rakennuspalvelut. Kaikki oikeudet pidätetään.
           </p>
           <p className="text-xs text-gray-300">
             Asbestipurkulupa voimassa - Ammattimaiset rakennuspalvelut

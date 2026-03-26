@@ -31,7 +31,7 @@ export default function CityPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: `RGT Rakennuspalvelut - ${location.city}`,
-    description: `Ammattimaiset rakennuspalvelut ja asbestipurku ${location.city}ssa.`,
+    description: `Ammattimaiset rakennuspalvelut ja asbestipurku ${location.city}ssä.`,
     url: `https://rgt.fi/alueet/${location.slug}`,
     telephone: '+358505651646',
     email: 'info@rgt.fi',
@@ -66,20 +66,20 @@ export default function CityPage({ params }: Props) {
 
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Palvelualue</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Asbestipurku ja Rakennuspalvelut<br />{location.city}ssa
+            Asbestipurku ja Rakennuspalvelut<br />{location.city}ssä
           </h1>
           <p className="text-lg text-gray-500 max-w-2xl leading-relaxed mb-4">
             {location.description}
           </p>
           <p className="text-gray-400 mb-10">
-            Asbestipurkulupa voimassa. Kiintea hinta. Nopea aikataulu.
+            Asbestipurkulupa voimassa. Kiinteä hinta. Nopea aikataulu.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/yhteystiedot"
               className="inline-flex items-center justify-center bg-[#F5C518] text-black font-semibold px-8 py-4 hover:bg-[#e6b800] transition-colors"
             >
-              Pyydä tarjous {location.city}ssa
+              Pyydä tarjous {location.city}ssä
             </Link>
             <a
               href="tel:0505651646"
@@ -96,7 +96,7 @@ export default function CityPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Palvelut</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-            Palvelut {location.city}ssa
+            Palvelut {location.city}ssä
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
             {services.map((s) => (
@@ -108,7 +108,7 @@ export default function CityPage({ params }: Props) {
                 <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">{s.name}</h3>
                 <p className="text-sm text-gray-500 mb-4">{s.shortDesc}</p>
                 <span className="text-xs text-amber-600 flex items-center gap-1">
-                  Lue lisaa
+                  Lue lisää
                   <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -124,23 +124,23 @@ export default function CityPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Luotettava kumppani</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-            Ammattilaiset {location.city}ssa
+            Ammattilaiset {location.city}ssä
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
             <div className="bg-white p-8">
               <p className="text-4xl font-bold text-[#F5C518] mb-2">Lupa</p>
               <h3 className="font-semibold text-gray-900 mb-2">Asbestipurkulupa</h3>
-              <p className="text-sm text-gray-500">Voimassa oleva lupa kaikelle asbestityolle. Lainmukainen ja turvallinen.</p>
+              <p className="text-sm text-gray-500">Voimassa oleva lupa kaikelle asbestityölle. Lainmukainen ja turvallinen.</p>
             </div>
             <div className="bg-white p-8">
               <p className="text-4xl font-bold text-[#F5C518] mb-2">48h</p>
               <h3 className="font-semibold text-gray-900 mb-2">Nopea aloitus</h3>
-              <p className="text-sm text-gray-500">Pystymme usein aloittamaan 1-2 paivan sisalla yhteydenotosta.</p>
+              <p className="text-sm text-gray-500">Pystymme usein aloittamaan 1-2 päivän sisällä yhteydenotosta.</p>
             </div>
             <div className="bg-white p-8">
-              <p className="text-4xl font-bold text-[#F5C518] mb-2">Kiintea</p>
-              <h3 className="font-semibold text-gray-900 mb-2">Kiintea hinta</h3>
-              <p className="text-sm text-gray-500">Tarjoamme urakat kiintealla hinnalla. Ei yllatyslaskuja.</p>
+              <p className="text-4xl font-bold text-[#F5C518] mb-2">Kiinteä</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Kiinteä hinta</h3>
+              <p className="text-sm text-gray-500">Tarjoamme urakat kiinteällä hinnalla. Ei yllätyslaskuja.</p>
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function CityPage({ params }: Props) {
       <section className="py-20 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Muut alueet</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Toimimme myos</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Toimimme myös</h2>
           <div className="flex flex-wrap gap-3">
             {locations.filter((l) => l.slug !== location.slug).map((l) => (
               <Link
@@ -166,8 +166,8 @@ export default function CityPage({ params }: Props) {
       </section>
 
       <CTASection
-        title={`Pyydä tarjous ${location.city}ssa`}
-        subtitle={`Tata yhteydenottolomaketta tai soita. Palvelemme ${location.city}ssa ja lahialueilla.`}
+        title={`Pyydä tarjous ${location.city}ssä`}
+        subtitle={`Täytä yhteydenottolomake tai soita. Palvelemme ${location.city}ssä ja lähialueilla.`}
       />
     </>
   )

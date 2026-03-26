@@ -9,7 +9,7 @@ import CTASection from '@/components/CTASection'
 
 export const metadata: Metadata = {
   title: 'RGT Rakennuspalvelut - Asbestipurku ja Rakennuspalvelut Helsinki',
-  description: 'Ammattimaiset rakennuspalvelut ja asbestipurku Helsingissa ja Uudellamaalla. Asbestipurkulupa voimassa. Nopea aikataulu, kiintea hinta. Y: 3099600-5.',
+  description: 'Ammattimaiset rakennuspalvelut ja asbestipurku Helsingissä ja Uudellamaalla. Asbestipurkulupa voimassa. Nopea aikataulu, kiinteä hinta. Y: 3099600-5.',
   keywords: ['asbestipurku', 'rakennuspalvelut helsinki', 'asbestipurku helsinki', 'purku-urakka', 'keittiöremontti helsinki'],
 }
 
@@ -17,7 +17,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'RGT Rakennuspalvelut',
-  description: 'Ammattimaiset rakennuspalvelut ja asbestipurku Helsingissa ja Uudellamaalla.',
+  description: 'Ammattimaiset rakennuspalvelut ja asbestipurku Helsingissä ja Uudellamaalla.',
   url: 'https://rgt.fi',
   telephone: '+358505651646',
   email: 'info@rgt.fi',
@@ -44,18 +44,18 @@ const faqJsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Onko teilla asbestipurkulupa?',
+      name: 'Onko teillä asbestipurkulupa?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Kyllä. RGT Rakennuspalveluilla on voimassa oleva asbestipurkulupa. Kaikki asbestityöt tehdaan lakien ja maaraysten mukaisesti koulutetulla henkilöstölla.',
+        text: 'Kyllä. RGT Rakennuspalveluilla on voimassa oleva asbestipurkulupa. Kaikki asbestityöt tehdään lakien ja määräysten mukaisesti koulutetulla henkilöstöllä.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Missa toimitte?',
+      name: 'Missä toimitte?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Toimimme paasiasiassa Helsingissa ja koko Uudenmaan alueella. Tarvittaessa hoidamme kohteita myos laajemmalla alueella - Tampere, Turku, Oulu.',
+        text: 'Toimimme pääasiassa Helsingissä ja koko Uudenmaan alueella. Tarvittaessa hoidamme kohteita myös laajemmalla alueella - Tampere, Turku, Oulu.',
       },
     },
     {
@@ -63,7 +63,7 @@ const faqJsonLd = {
       name: 'Kuinka nopeasti voitte aloittaa?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Pystymme usein aloittamaan muutaman paivan sisalla yhteydenotosta. Kiireelliset kohteet pyrimme hoitamaan mahdollisimman nopeasti.',
+        text: 'Pystymme usein aloittamaan muutaman päivän sisällä yhteydenotosta. Kiireelliset kohteet pyrimme hoitamaan mahdollisimman nopeasti.',
       },
     },
   ],

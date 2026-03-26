@@ -18,7 +18,7 @@ export default function YhteystiedotPage() {
             Ota yhteyttä
           </h1>
           <p className="text-gray-500 text-lg max-w-xl">
-            Tayita lomake tai soita suoraan. Vastaamme nopeasti ja annamme ilmaisen tarjouksen.
+            Täytä lomake tai soita suoraan. Vastaamme nopeasti ja annamme ilmaisen tarjouksen.
           </p>
         </div>
       </section>
@@ -30,7 +30,7 @@ export default function YhteystiedotPage() {
             {/* Form */}
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-2">Pyydä tarjous</h2>
-              <p className="text-gray-500 text-sm mb-8">Tayita lomake ja otamme yhteyttä mahdollisimman pian.</p>
+              <p className="text-gray-500 text-sm mb-8">Täytä lomake ja otamme yhteyttä mahdollisimman pian.</p>
               <ContactForm />
             </div>
 
@@ -48,7 +48,7 @@ export default function YhteystiedotPage() {
                 </div>
 
                 <div className="border border-gray-200 bg-gray-50 p-6">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Sahkoposti</p>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Sähköposti</p>
                   <a href="mailto:info@rgt.fi" className="text-lg font-medium text-gray-900 hover:text-amber-600 transition-colors">
                     info@rgt.fi
                   </a>
@@ -61,8 +61,8 @@ export default function YhteystiedotPage() {
                 </div>
 
                 <div className="border border-gray-200 bg-gray-50 p-6">
-                  <p className="text-xs font-semibond uppercase tracking-widest text-amber-600 mb-3">Yritystiedot</p>
-                  <p className="text-gray-500 text-sm">RGT Henkilopalvelut Oy</p>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Yritystiedot</p>
+                  <p className="text-gray-500 text-sm">RGT Henkilöstöpalvelut Oy</p>
                   <p className="text-gray-500 text-sm">Y-tunnus: 3099600-5</p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function YhteystiedotPage() {
               <div className="mt-8 border border-[#F5C518]/40 bg-amber-50 p-6">
                 <p className="text-amber-700 font-semibold text-sm mb-1">Nopea palvelu</p>
                 <p className="text-amber-600/80 text-sm leading-relaxed">
-                  Pyrimme vastaamaan kaikkiin yhteydenottoihin saman paivan sisalla. Kiireellisissa tapauksissa soita suoraan.
+                  Pyrimme vastaamaan kaikkiin yhteydenottoihin saman päivän sisällä. Kiireellisissä tapauksissa soita suoraan.
                 </p>
               </div>
             </div>

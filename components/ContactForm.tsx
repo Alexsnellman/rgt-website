@@ -57,7 +57,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-xs font-medium text-gray-500 mb-1.5">Sahkoposti</label>
+        <label className="block text-xs font-medium text-gray-500 mb-1.5">Sähköposti</label>
         <input
           type="email"
           placeholder="matti@esimerkki.fi"
@@ -95,12 +95,12 @@ export default function ContactForm() {
       </div>
 
       {status === 'error' && (
-        <p className="text-red-500 text-sm">{errorMsg || 'Jokin meni pieleen. Yrita uudelleen.'}</p>
+        <p className="text-red-500 text-sm">{errorMsg || 'Jokin meni pieleen. Yritä uudelleen.'}</p>
       )}
 
       {status === 'success' ? (
         <div className="bg-amber-50 border border-amber-200 px-6 py-4 text-amber-700 text-sm font-medium">
-          Viesti lahetetty! Otamme yhteytta pian.
+          Viesti lähetetty! Otamme yhteyttä pian.
         </div>
       ) : (
         <button
@@ -108,7 +108,7 @@ export default function ContactForm() {
           disabled={status === 'loading'}
           className="w-full bg-[#F5C518] text-black font-semibold py-4 hover:bg-[#e6b800] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {status === 'loading' ? 'Lahetetaan...' : 'Laheta viesti'}
+          {status === 'loading' ? 'Lähetetään...' : 'Lähetä viesti'}
         </button>
       )}
     </form>

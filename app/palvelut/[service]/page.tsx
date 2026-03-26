@@ -83,7 +83,7 @@ export default function ServicePage({ params }: Props) {
           {service.featured && (
             <div className="mb-6">
               <span className="text-xs font-semibold text-amber-600 border border-amber-200 bg-amber-50 px-2 py-0.5">
-                Paapalvelu
+                Pääpalvelu
               </span>
             </div>
           )}
@@ -107,8 +107,8 @@ export default function ServicePage({ params }: Props) {
       {/* Features */}
       <section className="py-20 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Sisaltaa</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">Mita palvelu sisaltaa</h2>
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Sisältää</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">Mitä palvelu sisältää</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
             {service.features.map((f) => (
               <div key={f} className="bg-white px-6 py-5 flex items-start gap-3">
@@ -125,7 +125,7 @@ export default function ServicePage({ params }: Props) {
       {/* Use cases */}
       <section className="py-20 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Kayttokohteet</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Käyttökohteet</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">Tyypilliset kohteet</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
             {service.useCases.map((uc) => (
@@ -144,7 +144,7 @@ export default function ServicePage({ params }: Props) {
       {/* Related services */}
       <section className="py-20 bg-white border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Katso myos</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Katso myös</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">Muut palvelut</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
             {relatedServices.map((s) => (

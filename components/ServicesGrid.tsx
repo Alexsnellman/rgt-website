@@ -11,7 +11,7 @@ export default function ServicesGrid() {
             Kaikki rakennuspalvelut
           </h2>
           <p className="mt-4 text-gray-500 max-w-xl text-lg">
-            Ammattimaiset rakennuspalvelut yhdelta tiimilta - nopeasti ja huolella.
+            Ammattimaiset rakennuspalvelut yhdeltä tiimiltä - nopeasti ja huolella.
           </p>
         </div>
 
@@ -27,7 +27,7 @@ export default function ServicesGrid() {
               {s.featured && (
                 <div className="mb-4">
                   <span className="text-xs font-semibold text-amber-600 border border-amber-200 bg-amber-50 px-2 py-0.5">
-                    Paapalvelu
+                    Pääpalvelu
                   </span>
                 </div>
               )}
@@ -36,7 +36,7 @@ export default function ServicesGrid() {
               </h3>
               <p className="text-sm text-gray-500 leading-relaxed mb-6">{s.shortDesc}</p>
               <span className="text-xs font-medium text-amber-600 flex items-center gap-1">
-                Lue lisaa
+                Lue lisää
                 <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

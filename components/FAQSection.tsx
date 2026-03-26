@@ -7,12 +7,12 @@ interface FAQItem {
 }
 
 const defaultFAQ: FAQItem[] = [
-  { question: 'Onko teilla asbestipurkulupa?', answer: 'Kylla. RGT Rakennuspalveluilla on voimassa oleva asbestipurkulupa. Kaikki asbestityot tehdaan lakien ja maaraysten mukaisesti koulutetulla henkilostolla.' },
-  { question: 'Missa toimitte?', answer: 'Toimimme paasiasiassa Helsingissa ja koko Uudenmaan alueella. Tarvittaessa hoidamme kohteita myos laajemmalla alueella - Tampere, Turku, Oulu. Kysy rohkeasti.' },
-  { question: 'Kuinka nopeasti voitte aloittaa?', answer: 'Pystymme usein aloittamaan muutaman paivan sisalla yhteydenotosta. Kiireelliset kohteet pyrimme hoitamaan mahdollisimman nopeasti.' },
-  { question: 'Teetteko myos pienet urakat?', answer: 'Kylla. Otamme vastaan urakat kaikista kokoluokista - yksittaisesta kylpyhuoneen purkamisesta suuriin teollisuuskohteisiin.' },
-  { question: 'Mika on hinta?', answer: 'Hinta maaraytyy kohteen koosta ja tyon laajuudesta. Tarjoamme kiintean hinnan tarjouksen maksutta. Ota yhteytta ja pyydaa tarjous.' },
-  { question: 'Hoidatteko jatteiden kuljetuksen?', answer: 'Kylla. Huolehdimme kaikesta jatteista - myos asbestijatteesta - asianmukaisiin vastaanottopaikkoihin. Hinta sisaltyy urakkaan.' },
+  { question: 'Onko teillä asbestipurkulupa?', answer: 'Kyllä. RGT Rakennuspalveluilla on voimassa oleva asbestipurkulupa. Kaikki asbestityöt tehdään lakien ja määräysten mukaisesti koulutetulla henkilöstöllä.' },
+  { question: 'Missä toimitte?', answer: 'Toimimme pääasiassa Helsingissä ja koko Uudenmaan alueella. Tarvittaessa hoidamme kohteita myös laajemmalla alueella - Tampere, Turku, Oulu. Kysy rohkeasti.' },
+  { question: 'Kuinka nopeasti voitte aloittaa?', answer: 'Pystymme usein aloittamaan muutaman päivän sisällä yhteydenotosta. Kiireelliset kohteet pyrimme hoitamaan mahdollisimman nopeasti.' },
+  { question: 'Teettekö myös pienet urakat?', answer: 'Kyllä. Otamme vastaan urakat kaikista kokoluokista - yksittäisestä kylpyhuoneen purkamisesta suuriin teollisuuskohteisiin.' },
+  { question: 'Mikä on hinta?', answer: 'Hinta määräytyy kohteen koosta ja työn laajuudesta. Tarjoamme kiinteän hinnan tarjouksen maksutta. Ota yhteyttä ja pyydä tarjous.' },
+  { question: 'Hoidatteko jätteiden kuljetuksen?', answer: 'Kyllä. Huolehdimme kaikista jätteistä - myös asbestijätteestä - asianmukaisiin vastaanottopaikkoihin. Hinta sisältyy urakkaan.' },
 ]
 
 interface FAQSectionProps {
@@ -28,7 +28,7 @@ export default function FAQSection({ items = defaultFAQ }: FAQSectionProps) {
         <div className="mb-12">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">UKK</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-            Usein kysyttya
+            Usein kysyttyä
           </h2>
         </div>
 

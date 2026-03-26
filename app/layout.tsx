@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'RGT Rakennuspalvelut - Asbestipurku ja Rakennuspalvelut Helsinki',
-  description: 'Ammattimaiset rakennuspalvelut ja asbestipurku Helsingissa ja Uudellamaalla. Asbestipurkulupa voimassa. Nopea aikataulu, kiintea hinta.',
+  description: 'Ammattimaiset rakennuspalvelut ja asbestipurku Helsingissä ja Uudellamaalla. Asbestipurkulupa voimassa. Nopea aikataulu, kiinteä hinta.',
   openGraph: {
     siteName: 'RGT Rakennuspalvelut',
     locale: 'fi_FI',

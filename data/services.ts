@@ -21,7 +21,7 @@ export const services: Service[] = [
     name: 'Asbestipurku',
     shortDesc: 'Turvallinen ja luvallinen asbestinpoisto ammattilaisilta.',
     featured: true,
-    icon: '⚠️',
+    icon: '',
     description:
       'RGT Rakennuspalveluilla on voimassa oleva asbestipurkulupa. Suoritamme asbestipurun turvallisesti, lakien mukaisesti ja siististi - niin pienissä saneerauskohteissa kuin suurissa teollisuuspurkutöissä. Turvallisuus ja lakimääräisten vaatimusten noudattaminen on meille ensisijaista.',
     features: [
@@ -55,7 +55,7 @@ export const services: Service[] = [
     slug: 'purku-urakointi',
     name: 'Purku-urakointi',
     shortDesc: 'Nopeat ja siistit purku-urakat pienistä suuriin kohteisiin.',
-    icon: '🏗️',
+    icon: '',
     description:
       'Suoritamme kaikenlaisia purku-urakoita - keittiöiden, kylpyhuoneiden ja muiden tilojen purkamisesta kokonaisten rakenteiden purkuun. Työmme on nopeaa, siistiä ja kustannustehokasta. Hoidamme myös jätteiden kuljetuksen.',
     features: [
@@ -74,8 +74,8 @@ export const services: Service[] = [
     ],
     faq: [
       { question: 'Kuljetetaanko purkujätteet pois?', answer: 'Kyllä, hoidamme purkujätteiden lajittelun ja kuljetuksen. Hinta sisältyy tarjoukseen.' },
-      { question: 'Pystyykö purku tehdä nopeasti?', answer: 'Kyllä. Meillä on ammattitaitoinen tiimi ja pystymme aloittamaan työn lyhyellä varoitusajalla.' },
-      { question: 'Teetkö myös osittaisia purkuja?', answer: 'Kyllä. Voimme purkaa esimerkiksi vain yksittäisen seinän tai katon, ei tarvitse purkaa koko tilaa.' },
+      { question: 'Pystyykö purun tekemään nopeasti?', answer: 'Kyllä. Meillä on ammattitaitoinen tiimi ja pystymme aloittamaan työn lyhyellä varoitusajalla.' },
+      { question: 'Teettekö myös osittaisia purkuja?', answer: 'Kyllä. Voimme purkaa esimerkiksi vain yksittäisen seinän tai katon, ei tarvitse purkaa koko tilaa.' },
     ],
     seo: {
       title: 'Purku-urakointi Helsinki | RGT Rakennuspalvelut',
@@ -84,15 +84,15 @@ export const services: Service[] = [
     },
   },
   {
-    slug: 'keittiöremontti',
+    slug: 'keittioremontti',
     name: 'Keittiöremontti',
     shortDesc: 'Keittiöremontti avaimet käteen - purkamisesta asennukseen.',
-    icon: '🍳',
+    icon: '',
     description:
       'Toteutamme keittiöremontin alusta loppuun. Puramme vanhan keittiön, asennamme uudet kaapistot ja kalusteet, uusimme tarvittaessa lattian ja seinäpinnat. Työn laatu on huippuluokkaa ja aikataulu pitää.',
     features: [
       'Vanhan keittiön purku',
-      'Uusien kaapistoen asennus',
+      'Uusien kaapiston asennus',
       'Lattian vaihto tai pinnoitus',
       'Väliseinä- ja pintamuutokset',
       'Kodinkoneiden kytkentä',
@@ -118,13 +118,13 @@ export const services: Service[] = [
     slug: 'saneeraus',
     name: 'Saneeraus ja pinnoitukset',
     shortDesc: 'Lattiat, seinät ja katot - laadukkaasti uusittuna.',
-    icon: '🔨',
+    icon: '',
     description:
       'Uusimme lattiat, seinäpinnat ja katot asunnoissa, toimistoissa ja liiketiloissa. Työmme on huolellista ja siistiä. Materiaalivalikoima on laaja - laminaatista parketista laattaan.',
     features: [
       'Lattioiden vaihto ja pinnoitus',
       'Seinien tasoitus ja maalaus',
-      'Laattaworkyt',
+      'Laattatyöt',
       'Väliseinien rakentaminen',
       'Katon uusiminen',
       'Pintamateriaalien asennus',
@@ -132,23 +132,23 @@ export const services: Service[] = [
     useCases: [
       { title: 'Asuntoremontti', description: 'Lattioiden, seinien ja katon uusiminen asuinhuoneistossa.' },
       { title: 'Toimistosaneeraus', description: 'Toimistotilojen pinnoitukset aikataulun mukaan.' },
-      { title: 'Kylpyhuoneremontti', description: 'Laattaworkyt, vesieristykset ja pinnoitukset.' },
+      { title: 'Kylpyhuoneremontti', description: 'Laattatyöt, vesieristykset ja pinnoitukset.' },
     ],
     faq: [
       { question: 'Mitä lattiamateriaaleja asennatte?', answer: 'Asennamme laminaattia, parkettia, laattaa, vinyyli- ja muovimattoa sekä muita pintamateriaaleja.' },
       { question: 'Tarvitseeko asunnosta muuttaa pois remontin ajaksi?', answer: 'Pienissä töissä ei välttämättä tarvitse. Laajemmissa saneerauksissa suosittelemme väliaikaista asumista muualla.' },
     ],
     seo: {
-      title: 'Saneeraus Helsinki | Lattia- ja Seinäremontit | RGT Rakennuspalvelut',
+      title: 'Saneeraus Helsinki | Lattia- ja seinäremontit | RGT Rakennuspalvelut',
       description: 'Laadukkaat saneeraustyöt Helsingissä - lattiat, seinät, katot. Kokenut tiimi, nopea aikataulu. Pyydä tarjous.',
-      keywords: ['saneeraus helsinki', 'lattiasaneeraus', 'seinäremontti', 'pintaremontti helsinki', 'laattaworky'],
+      keywords: ['saneeraus helsinki', 'lattiasaneeraus', 'seinäremontti', 'pintaremontti helsinki', 'laattatyöt'],
     },
   },
   {
     slug: 'loppusiivous',
     name: 'Loppusiivous',
     shortDesc: 'Remontin jälkeinen siivous - työmaa puhtaaksi nopeasti.',
-    icon: '🧹',
+    icon: '',
     description:
       'Remontin jälkeen työmaa on usein pölyn ja jätteen peitossa. Hoidamme loppusiivouksen ammattimaisesti - lopputulos on puhdas ja valmis käyttöön. Siivouspalvelu on saatavilla myös erillisenä tilauksena.',
     features: [
@@ -156,7 +156,7 @@ export const services: Service[] = [
       'Lattioiden pesu ja kiillotus',
       'Ikkunoiden puhdistus',
       'Kaluston pyyhintä',
-      'Jätepuskkien vienti',
+      'Jätepussien vienti',
       'Nopea ja tehokas palvelu',
     ],
     useCases: [

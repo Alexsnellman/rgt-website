@@ -2,17 +2,17 @@ const steps = [
   {
     number: '01',
     title: 'Ota yhteyttä',
-    description: 'Tata yhteydenottolomaketta tai soita suoraan. Vastaamme nopeasti ja sovitaan katselmuksesta tai tarjouksesta.',
+    description: 'Täytä yhteydenottolomake tai soita suoraan. Vastaamme nopeasti ja sovitaan katselmuksesta tai tarjouksesta.',
   },
   {
     number: '02',
     title: 'Kartoitus ja tarjous',
-    description: 'Tulemme tarvittaessa paikan paalle katsomaan kohteen. Annamme kiintean tarjouksen ilman yllatyslaskuja.',
+    description: 'Tulemme tarvittaessa paikan päälle katsomaan kohteen. Annamme kiinteän tarjouksen ilman yllätyslaskuja.',
   },
   {
     number: '03',
-    title: 'Tyo valmis',
-    description: 'Tiimimme hoitaa tyon sovitulla aikataululla. Jatamme tyomaan siistina ja toimitamme tarvittavat dokumentit.',
+    title: 'Työ valmis',
+    description: 'Tiimimme hoitaa työn sovitulla aikataululla. Jätämme työmaan siistinä ja toimitamme tarvittavat dokumentit.',
   },
 ]
 
@@ -21,7 +21,7 @@ export default function HowItWorks() {
     <section className="py-24 bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Naain se toimii</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Näin se toimii</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
             Kolme vaihetta valmiiseen
           </h2>
