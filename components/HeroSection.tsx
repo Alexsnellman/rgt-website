@@ -1,11 +1,13 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface HeroSectionProps {
   cityInessive?: string
   service?: string
+  image?: string
 }
 
-export default function HeroSection({ cityInessive, service }: HeroSectionProps) {
+export default function HeroSection({ cityInessive, service, image }: HeroSectionProps) {
   const headline = service
     ? `${service} - Ammattilaiset paikalle nopeasti`
     : cityInessive
@@ -16,35 +18,41 @@ export default function HeroSection({ cityInessive, service }: HeroSectionProps)
     ? `RGT Rakennuspalvelut tarjoaa ammattimaiset rakennuspalvelut ${cityInessive}. Asbestipurkulupa voimassa. Nopea aikataulu, siisti työ.`
     : 'Voimassa oleva asbestipurkulupa. Purku-urakat, keittiöremontit, saneeraukset ja loppusiivous - kaikki saman katon alta.'
 
-  return (
-    <section className="pt-16 min-h-[85vh] flex items-center bg-white relative overflow-hidden">
-      {/* Yellow accent line */}
-      <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#F5C518]" />
+  const heroImage = image || '/images/hero.avif'
 
-      {/* Background grid */}
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
-        }}
+  return (
+    <section className="pt-16 min-h-[85vh] flex items-center relative overflow-hidden">
+      {/* Background image */}
+      <Image
+        src={heroImage}
+        alt="Rakennustyömaa"
+        fill
+        className="object-cover"
+        priority
+        quality={85}
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 py-24">
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      {/* Yellow accent line */}
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#F5C518] z-10" />
+
+      <div className="relative max-w-7xl mx-auto px-6 py-24 z-10">
         <div className="max-w-4xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 mb-8">
             <span className="w-1.5 h-1.5 bg-[#F5C518] rounded-full" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-amber-600">
+            <span className="text-xs font-semibold uppercase tracking-widest text-amber-400">
               Asbestipurkulupa voimassa
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6">
             {headline}
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed mb-10">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed mb-10">
             {sub}
           </p>
 
@@ -57,7 +65,7 @@ export default function HeroSection({ cityInessive, service }: HeroSectionProps)
             </Link>
             <Link
               href="/palvelut/asbestipurku"
-              className="inline-flex items-center justify-center border border-gray-300 text-gray-700 font-medium px-8 py-4 hover:border-[#F5C518] hover:text-amber-600 transition-colors text-base"
+              className="inline-flex items-center justify-center border border-white/30 text-white font-medium px-8 py-4 hover:border-[#F5C518] hover:text-[#F5C518] transition-colors text-base"
             >
               Asbestipurku
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

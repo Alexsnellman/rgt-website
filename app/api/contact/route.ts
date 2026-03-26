@@ -39,7 +39,7 @@ export async function POST(req: Request) {
               <td style="padding: 10px 0; color: #111;">${phone}</td>
             </tr>
             ${email ? `<tr>
-              <td style="padding: 10px 0; color: #666; font-weight: bold;">Sahköposti:</td>
+              <td style="padding: 10px 0; color: #666; font-weight: bold;">Sähköposti:</td>
               <td style="padding: 10px 0; color: #111;">${email}</td>
             </tr>` : ''}
             ${service ? `<tr>
@@ -61,6 +61,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true })
   } catch (err) {
     console.error('Contact form error:', err)
-    return NextResponse.json({ error: 'Lahettaminen epaonnistui' }, { status: 500 })
+    return NextResponse.json({ error: 'Lähettäminen epäonnistui' }, { status: 500 })
   }
 }

@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const reasons = [
   {
     title: 'Lupa-asiat kunnossa',
@@ -60,23 +62,42 @@ export default function WhyUs() {
   return (
     <section className="py-24 bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Miksi RGT</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-            Miksi valita meidät
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 border border-gray-200 overflow-hidden">
-          {reasons.map((r) => (
-            <div key={r.title} className="bg-white p-8">
-              <div className="w-10 h-10 bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-600 mb-4">
-                {r.icon}
-              </div>
-              <h3 className="text-base font-semibold text-gray-900 mb-2">{r.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{r.description}</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Photo */}
+          <div className="relative h-80 lg:h-full lg:min-h-[500px] overflow-hidden border border-gray-200">
+            <Image
+              src="/images/workers.jpg"
+              alt="RGT rakennustiimi"
+              fill
+              className="object-cover"
+              quality={80}
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-6">
+              <p className="text-white font-semibold text-sm">Ammattitaitoinen tiimimme</p>
             </div>
-          ))}
+          </div>
+
+          {/* Reasons */}
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Miksi RGT</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
+              Miksi valita meidät
+            </h2>
+
+            <div className="space-y-6">
+              {reasons.map((r) => (
+                <div key={r.title} className="flex gap-4">
+                  <div className="w-10 h-10 shrink-0 bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-600">
+                    {r.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-gray-900 mb-1">{r.title}</h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">{r.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

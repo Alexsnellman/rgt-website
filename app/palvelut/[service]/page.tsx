@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { services, getService } from '@/data/services'
 import FAQSection from '@/components/FAQSection'
 import CTASection from '@/components/CTASection'
@@ -102,6 +103,18 @@ export default function ServicePage({ params }: Props) {
             Pyydä tarjous
           </Link>
         </div>
+      </section>
+
+      {/* Service image */}
+      <section className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
+        <Image
+          src={service.image}
+          alt={service.name}
+          fill
+          className="object-cover"
+          quality={80}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
       </section>
 
       {/* Features */}
