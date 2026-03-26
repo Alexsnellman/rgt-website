@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { services } from '@/data/services'
-import { locations } from '@/data/locations'
+import { activeLocations } from '@/data/locations'
 
 export default function Footer() {
   return (
@@ -51,7 +51,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Palvelualueet</h3>
             <ul className="space-y-2">
-              {locations.map((l) => (
+              {activeLocations.map((l) => (
                 <li key={l.slug}>
                   <Link
                     href={`/alueet/${l.slug}`}

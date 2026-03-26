@@ -33,7 +33,7 @@ const jsonLd = {
     latitude: 60.2141,
     longitude: 25.0124,
   },
-  areaServed: ['Helsinki', 'Espoo', 'Vantaa', 'Tampere', 'Turku', 'Oulu'],
+  areaServed: ['Helsinki', 'Espoo', 'Vantaa'],
   priceRange: '$$',
   openingHours: 'Mo-Fr 07:00-18:00',
 }

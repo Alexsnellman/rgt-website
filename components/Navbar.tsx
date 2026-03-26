@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { services } from '@/data/services'
-import { locations } from '@/data/locations'
+import { activeLocations } from '@/data/locations'
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -72,7 +72,7 @@ export default function Navbar() {
             {alueetOpen && (
               <div className="absolute top-full left-0 pt-2 w-48">
                 <div className="bg-white border border-gray-200 shadow-lg py-2">
-                  {locations.map((l) => (
+                  {activeLocations.map((l) => (
                     <Link
                       key={l.slug}
                       href={`/alueet/${l.slug}`}
@@ -137,7 +137,7 @@ export default function Navbar() {
             ))}
             <div className="border-t border-gray-200 my-3" />
             <p className="text-xs text-gray-400 uppercase tracking-widest mb-3">Alueet</p>
-            {locations.map((l) => (
+            {activeLocations.map((l) => (
               <Link
                 key={l.slug}
                 href={`/alueet/${l.slug}`}

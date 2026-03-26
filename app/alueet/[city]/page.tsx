@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { locations, getLocation } from '@/data/locations'
+import { locations, activeLocations, getLocation } from '@/data/locations'
 import { services } from '@/data/services'
 import CTASection from '@/components/CTASection'
 
@@ -152,7 +152,7 @@ export default function CityPage({ params }: Props) {
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 mb-3">Muut alueet</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">Toimimme myös</h2>
           <div className="flex flex-wrap gap-3">
-            {locations.filter((l) => l.slug !== location.slug).map((l) => (
+            {activeLocations.filter((l) => l.slug !== location.slug).map((l) => (
               <Link
                 key={l.slug}
                 href={`/alueet/${l.slug}`}

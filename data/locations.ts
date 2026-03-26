@@ -3,6 +3,7 @@ export interface Location {
   city: string
   cityInessive: string // "missä?" - Helsingissä, Espoossa, Vantaalla
   region: string
+  active: boolean // shown in nav/footer/links
   description: string
   seo: {
     title: string
@@ -17,6 +18,7 @@ export const locations: Location[] = [
     city: 'Helsinki',
     cityInessive: 'Helsingissä',
     region: 'Uusimaa',
+    active: true,
     description: 'Palvelemme Helsingissä ja koko pääkaupunkiseudulla. Toimistomme sijaitsee Helsingissä ja pystymme aloittamaan työn nopealla aikataululla.',
     seo: {
       title: 'Asbestipurku Helsinki | Rakennuspalvelut Helsinki | RGT',
@@ -29,6 +31,7 @@ export const locations: Location[] = [
     city: 'Espoo',
     cityInessive: 'Espoossa',
     region: 'Uusimaa',
+    active: true,
     description: 'Palvelemme Espoossa ja lähialueilla. Nopea siirtyminen kohteeseen - pääkaupunkiseudun kohteet hoidamme tehokkaasti.',
     seo: {
       title: 'Asbestipurku Espoo | Rakennuspalvelut Espoo | RGT',
@@ -41,6 +44,7 @@ export const locations: Location[] = [
     city: 'Vantaa',
     cityInessive: 'Vantaalla',
     region: 'Uusimaa',
+    active: true,
     description: 'Palvelemme Vantaalla ja lähialueilla. Ammattitaitoiset rakennuspalvelut nopealla aikataululla.',
     seo: {
       title: 'Asbestipurku Vantaa | Rakennuspalvelut Vantaa | RGT',
@@ -53,6 +57,7 @@ export const locations: Location[] = [
     city: 'Tampere',
     cityInessive: 'Tampereella',
     region: 'Pirkanmaa',
+    active: false,
     description: 'Palvelemme myös Tampereella ja Pirkanmaalla. Ota yhteyttä ja sovitaan kohteesta.',
     seo: {
       title: 'Asbestipurku Tampere | Rakennuspalvelut Tampere | RGT',
@@ -65,6 +70,7 @@ export const locations: Location[] = [
     city: 'Turku',
     cityInessive: 'Turussa',
     region: 'Varsinais-Suomi',
+    active: false,
     description: 'Palvelemme Turussa ja Varsinais-Suomessa. Laadukkaat rakennuspalvelut ja asbestipurku.',
     seo: {
       title: 'Asbestipurku Turku | Rakennuspalvelut Turku | RGT',
@@ -77,6 +83,7 @@ export const locations: Location[] = [
     city: 'Oulu',
     cityInessive: 'Oulussa',
     region: 'Pohjois-Pohjanmaa',
+    active: false,
     description: 'Palvelemme myös Oulussa ja Pohjois-Pohjanmaalla. Ota yhteyttä ja selvitetään mahdollisuudet.',
     seo: {
       title: 'Asbestipurku Oulu | Rakennuspalvelut Oulu | RGT',
@@ -89,6 +96,7 @@ export const locations: Location[] = [
     city: 'Jyväskylä',
     cityInessive: 'Jyväskylässä',
     region: 'Keski-Suomi',
+    active: false,
     description: 'Palvelemme Jyväskylän alueella. Laadukkaat rakennuspalvelut ammattitaitoiselta tiimiltämme.',
     seo: {
       title: 'Asbestipurku Jyväskylä | Rakennuspalvelut Jyväskylä | RGT',
@@ -97,6 +105,8 @@ export const locations: Location[] = [
     },
   },
 ]
+
+export const activeLocations = locations.filter((l) => l.active)
 
 export function getLocation(slug: string): Location | undefined {
   return locations.find((l) => l.slug === slug)
