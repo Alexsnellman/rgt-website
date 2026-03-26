@@ -58,7 +58,7 @@ export const services: Service[] = [
     name: 'Purku-urakointi',
     shortDesc: 'Nopeat ja siistit purku-urakat pienistä suuriin kohteisiin.',
     icon: '',
-    image: '/images/unsplash-1.avif',
+    image: '/images/purku.jpg',
     description:
       'Suoritamme kaikenlaisia purku-urakoita - keittiöiden, kylpyhuoneiden ja muiden tilojen purkamisesta kokonaisten rakenteiden purkuun. Työmme on nopeaa, siistiä ja kustannustehokasta. Hoidamme myös jätteiden kuljetuksen.',
     features: [
