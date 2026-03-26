@@ -66,8 +66,8 @@ export default function WhyUs() {
           {/* Photo */}
           <div className="relative h-80 lg:h-full lg:min-h-[500px] overflow-hidden border border-gray-200">
             <Image
-              src="/images/workers.jpg"
-              alt="RGT rakennustiimi"
+              src="/images/roof-workers.jpg"
+              alt="RGT rakennustiimi työssä"
               fill
               className="object-cover"
               quality={80}
